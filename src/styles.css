@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:wght@400;500;600&display=swap');
+
+.btn-edit{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 0;
+    color: white;
+    background:#f8cc62;
+}
+
+/*  font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Poppins', sans-serif; */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 0 0 0;
+}
