@@ -1,14 +1,27 @@
-import { Component } from '@angular/core';
+import { ThisReceiver } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
+import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
   styleUrls: ['./experiencia.component.css']
 })
-export class ExperienciaComponent {
+export class ExperienciaComponent implements OnInit {
 
     mostrar: Boolean = false;
     icono: String = "fa-solid fa-plus"
+    estudiositos: any;
+    nombresito : String = '';
+
+    constructor(private datos:DatosService){}
+
+    ngOnInit(): void {
+      this.datos.getDatos().subscribe(data => {
+        this.estudiositos = data.estudios;
+        this.nombresito = data.nombre;
+      })
+    }
     
     mostrarOcultar(){
 
@@ -20,4 +33,6 @@ export class ExperienciaComponent {
         this.icono = "fa-solid fa-minus"
       }
     }
+
+
 }

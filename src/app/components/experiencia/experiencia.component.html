@@ -58,21 +58,21 @@
         <!---------------------------- Final form Agregar Experiencia ------------------>
 
         <div class="row row-cols-1 row-cols-md-3 g-3 my-5">
-            <div class="col">
+            <div class="col" *ngFor="let estudito of estudiositos">
               <div class="card">
                 <img src="/assets/img/card-image-noFound.png" class="card-img-top" alt="Logo-empresa">
                 <div class="card-body">
-                    <h5 class="card-title">Nombre Empresa.</h5>
+                    <h5 class="card-title">{{estudito.institucion}}</h5>
                     <p class="card-text lh-sm">
-                        <br> Titulo del puesto.
-                        <br> Periodo.
-                        <br> Descripcion de las actividades
+                        <br> {{estudito.titulo}}
+                        <br> {{estudito.inicio}} {{estudito.fin}}
+                        <br> {{estudito.descripcion}}
                     </p>
                 </div>
               </div>
             </div>
 
-            <div class="col">
+            <!-- <div class="col">
                 <div class="card">
                   <img src="/assets/img/card-image-noFound.png" class="card-img-top" alt="Logo-empresa">
                   <div class="card-body">
@@ -112,7 +112,7 @@
                       </p>
                   </div>
                 </div>
-              </div>
+              </div> -->
         </div>
     </div>
 </section>
