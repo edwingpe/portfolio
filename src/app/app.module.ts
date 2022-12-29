@@ -41,7 +41,7 @@ import { ModalAboutComponent } from './modals/modal-about/modal-about.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
