@@ -10,7 +10,7 @@ section.banner-section{
     width:auto;
     color: transparent;
     text-align: center;
-    /* text-transform: uppercase; */
+    text-transform: lowercase;
     font-size: 10rem;
     font-weight:bold;
     background-image: url(src/assets/img/banner1.jpg);
