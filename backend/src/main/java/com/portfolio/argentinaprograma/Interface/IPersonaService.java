@@ -12,10 +12,10 @@ public interface IPersonaService {
     public void savePersona(Persona persona);
     
     //Eliminar un objeto persona buscado por ID
-    public void deletePersona(Long id);
+    public void deletePersona(int id);
     
     //Buscar una persona por ID
     
-    public Persona findPersona(Long id);
+    public Persona findPersona(int id);
     
 }

@@ -17,6 +17,7 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ModalAboutComponent } from './modals/modal-about/modal-about.component';
+import { ExperienciaItemComponent } from './components/experiencia/experiencia-item.component';
 
 
 
@@ -34,6 +35,7 @@ import { ModalAboutComponent } from './modals/modal-about/modal-about.component'
     SkillsComponent,
     ProjectsComponent,
     ModalAboutComponent,
+    ExperienciaItemComponent,
   
     
   ],

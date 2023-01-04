@@ -1,6 +1,6 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/services/datos.service';
+import { Item } from './item';
 
 @Component({
   selector: 'app-experiencia',
@@ -8,19 +8,27 @@ import { DatosService } from 'src/app/services/datos.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
+  itemExp: Item[] = [
+    {
+      nombre: "Swiss Medical",
+      fechaIni: "25/11/1991",
+      fechaFin: "12/12/2000",
+      descripcion: "Lindo trabajo",
+    },
+    {
+      nombre: "Otro Labyrio",
+      fechaIni: "25/11/1991",
+      fechaFin: "12/12/2000",
+      descripcion: "meh",
+    }];
+      
+  mostrar: Boolean = false;
+  icono: String = "fa-solid fa-plus";
 
-    mostrar: Boolean = false;
-    icono: String = "fa-solid fa-plus"
-    estudiositos: any;
-    nombresito : String = '';
-
-    constructor(private datos:DatosService){}
+    constructor(){}
 
     ngOnInit(): void {
-      this.datos.getDatos().subscribe(data => {
-        this.estudiositos = data.estudios;
-        this.nombresito = data.nombre;
-      })
+      
     }
     
     mostrarOcultar(){
@@ -32,6 +40,10 @@ export class ExperienciaComponent implements OnInit {
         this.mostrar = true;
         this.icono = "fa-solid fa-minus"
       }
+    }
+
+    deleteItem(itemToDelete: Item): void{
+      this.itemExp = this.itemExp.filter((item) => item!==itemToDelete)
     }
 
 
